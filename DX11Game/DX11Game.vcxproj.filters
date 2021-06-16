@@ -364,6 +364,9 @@
     <ClCompile Include="Source\Engine\ECSSystem\CameraSystem.cpp">
       <Filter>ソース\エンジン\ECSSystem</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Scripts\RyugaTestScript.cpp">
+      <Filter>ソース\ゲームオブジェクト</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Engine\main.h">

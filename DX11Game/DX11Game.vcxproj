@@ -352,6 +352,7 @@
     <ClCompile Include="Source\Scripts\MakeEnemyScript.cpp" />
     <ClCompile Include="Source\Scripts\PlaneControlScript.cpp" />
     <ClCompile Include="Source\Scripts\PlayerScript.cpp" />
+    <ClCompile Include="Source\Scripts\RyugaTestScript.cpp" />
     <ClCompile Include="Source\Scripts\ScriptBaseLayout.cpp" />
     <ClCompile Include="Source\Scripts\SkyDomeScript.cpp" />
     <ClCompile Include="Source\Scripts\StartCrystalScript.cpp" />
