@@ -50,12 +50,6 @@
     <Filter Include="ソース\スクリプト">
       <UniqueIdentifier>{e0fd2763-76bb-4bd9-a8d6-564299cecf64}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース\ゲームオブジェクト">
-      <UniqueIdentifier>{8312bb02-83ed-4055-b583-6177a84d8e07}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース\エンジン\ECSWorld">
-      <UniqueIdentifier>{e0f75631-3622-4408-8f0c-09cf3aa77d3b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース\スクリプト\エネミー">
       <UniqueIdentifier>{345eacf7-13a1-4bee-be8a-c94b9381abe8}</UniqueIdentifier>
     </Filter>
@@ -73,6 +67,12 @@
     </Filter>
     <Filter Include="ライブラリ">
       <UniqueIdentifier>{10c524d9-100b-455f-891a-5e709fb6e40c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース\ワールド">
+      <UniqueIdentifier>{e0f75631-3622-4408-8f0c-09cf3aa77d3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース\エレクトリック">
+      <UniqueIdentifier>{76b9cc13-fecb-4282-824c-ec7a9d42ffeb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -251,10 +251,10 @@
       <Filter>ソース\エンジン\ECS\World</Filter>
     </ClCompile>
     <ClCompile Include="Source\Engine\ECSWorld\MasterWorld.cpp">
-      <Filter>ソース\エンジン\ECSWorld</Filter>
+      <Filter>ソース\ワールド</Filter>
     </ClCompile>
     <ClCompile Include="Source\Engine\ECSWorld\GameWorld.cpp">
-      <Filter>ソース\エンジン\ECSWorld</Filter>
+      <Filter>ソース\ワールド</Filter>
     </ClCompile>
     <ClCompile Include="Source\Scripts\FadeScript.cpp">
       <Filter>ソース\スクリプト</Filter>
@@ -269,7 +269,7 @@
       <Filter>ソース\エンジン\ECSComponent</Filter>
     </ClCompile>
     <ClCompile Include="Source\Engine\ECSWorld\TitleWorld.cpp">
-      <Filter>ソース\エンジン\ECSWorld</Filter>
+      <Filter>ソース\ワールド</Filter>
     </ClCompile>
     <ClCompile Include="Source\Scripts\BombCollisionScript.cpp">
       <Filter>ソース\スクリプト\デルタ</Filter>
@@ -329,7 +329,7 @@
       <Filter>ソース\スクリプト</Filter>
     </ClCompile>
     <ClCompile Include="Source\Engine\ECSWorld\TestWorld.cpp">
-      <Filter>ソース\エンジン\ECSWorld</Filter>
+      <Filter>ソース\ワールド</Filter>
     </ClCompile>
     <ClCompile Include="Source\Scripts\ExplosionScript.cpp">
       <Filter>ソース\スクリプト\テスト</Filter>
@@ -363,9 +363,6 @@
     </ClCompile>
     <ClCompile Include="Source\Engine\ECSSystem\CameraSystem.cpp">
       <Filter>ソース\エンジン\ECSSystem</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Scripts\RyugaTestScript.cpp">
-      <Filter>ソース\ゲームオブジェクト</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -514,10 +511,10 @@
       <Filter>ソース\エンジン\ECS\World</Filter>
     </ClInclude>
     <ClInclude Include="Source\Engine\ECSWorld\MasterWorld.h">
-      <Filter>ソース\エンジン\ECSWorld</Filter>
+      <Filter>ソース\ワールド</Filter>
     </ClInclude>
     <ClInclude Include="Source\Engine\ECSWorld\GameWorld.h">
-      <Filter>ソース\エンジン\ECSWorld</Filter>
+      <Filter>ソース\ワールド</Filter>
     </ClInclude>
     <ClInclude Include="Source\Scripts\FadeScript.h">
       <Filter>ソース\スクリプト</Filter>
@@ -532,7 +529,7 @@
       <Filter>ソース\エンジン\ECSComponent</Filter>
     </ClInclude>
     <ClInclude Include="Source\Engine\ECSWorld\TitleWorld.h">
-      <Filter>ソース\エンジン\ECSWorld</Filter>
+      <Filter>ソース\ワールド</Filter>
     </ClInclude>
     <ClInclude Include="Source\Scripts\BombCollisionScript.h">
       <Filter>ソース\スクリプト\デルタ</Filter>
@@ -592,7 +589,7 @@
       <Filter>ソース\スクリプト</Filter>
     </ClInclude>
     <ClInclude Include="Source\Engine\ECSWorld\TestWorld.h">
-      <Filter>ソース\エンジン\ECSWorld</Filter>
+      <Filter>ソース\ワールド</Filter>
     </ClInclude>
     <ClInclude Include="Source\Scripts\ExplosionScript.h">
       <Filter>ソース\スクリプト\テスト</Filter>
@@ -630,8 +627,5 @@
     <ClInclude Include="Source\Engine\ECSSystem\CameraSystem.h">
       <Filter>ソース\エンジン\ECSSystem</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
 </Project>

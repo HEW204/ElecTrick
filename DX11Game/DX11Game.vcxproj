@@ -352,7 +352,6 @@
     <ClCompile Include="Source\Scripts\MakeEnemyScript.cpp" />
     <ClCompile Include="Source\Scripts\PlaneControlScript.cpp" />
     <ClCompile Include="Source\Scripts\PlayerScript.cpp" />
-    <ClCompile Include="Source\Scripts\RyugaTestScript.cpp" />
     <ClCompile Include="Source\Scripts\ScriptBaseLayout.cpp" />
     <ClCompile Include="Source\Scripts\SkyDomeScript.cpp" />
     <ClCompile Include="Source\Scripts\StartCrystalScript.cpp" />
@@ -450,9 +449,6 @@
     <ClInclude Include="Source\Scripts\TitleScoreUIScript.h" />
     <ClInclude Include="Source\Scripts\TrackingMoveEnemyScript.h" />
     <ClInclude Include="Source\Scripts\TrackingMoveEnemyHostScript.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
