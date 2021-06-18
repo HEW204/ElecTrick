@@ -285,6 +285,8 @@
     <ClCompile Include="lib\imgui\imgui_impl_win32.cpp" />
     <ClCompile Include="lib\imgui\imgui_tables.cpp" />
     <ClCompile Include="lib\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="Source\ElecTrick\EndingFadeScript.cpp" />
+    <ClCompile Include="Source\ElecTrick\MenuScript.cpp" />
     <ClCompile Include="Source\Engine\ECSCompoent\Animator2D.cpp" />
     <ClCompile Include="Source\Engine\ECSCompoent\Animation2D.cpp" />
     <ClCompile Include="Source\Engine\ECSCompoent\AssimpRenderer.cpp" />
@@ -370,6 +372,8 @@
     <ClInclude Include="lib\imgui\imstb_rectpack.h" />
     <ClInclude Include="lib\imgui\imstb_textedit.h" />
     <ClInclude Include="lib\imgui\imstb_truetype.h" />
+    <ClInclude Include="Source\ElecTrick\EndingFadeScript.h" />
+    <ClInclude Include="Source\ElecTrick\MenuScript.h" />
     <ClInclude Include="Source\Engine\ECSCompoent\Animator2D.h" />
     <ClInclude Include="Source\Engine\ECSCompoent\Animation2D.h" />
     <ClInclude Include="Source\Engine\ECSCompoent\AssimpRenderer.h" />

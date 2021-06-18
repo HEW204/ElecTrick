@@ -364,6 +364,12 @@
     <ClCompile Include="Source\Engine\ECSSystem\CameraSystem.cpp">
       <Filter>ソース\エンジン\ECSSystem</Filter>
     </ClCompile>
+    <ClCompile Include="Source\ElecTrick\MenuScript.cpp">
+      <Filter>ソース\エレクトリック</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ElecTrick\EndingFadeScript.cpp">
+      <Filter>ソース\エレクトリック</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Engine\main.h">
@@ -626,6 +632,12 @@
     </ClInclude>
     <ClInclude Include="Source\Engine\ECSSystem\CameraSystem.h">
       <Filter>ソース\エンジン\ECSSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ElecTrick\MenuScript.h">
+      <Filter>ソース\エレクトリック</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ElecTrick\EndingFadeScript.h">
+      <Filter>ソース\エレクトリック</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
