@@ -74,6 +74,42 @@
     <Filter Include="ソース\エレクトリック">
       <UniqueIdentifier>{76b9cc13-fecb-4282-824c-ec7a9d42ffeb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース\エレクトリック\オブジェクト">
+      <UniqueIdentifier>{a02dc173-cba5-40c9-ad28-ac8e644aba4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース\エレクトリック\コンポーネント">
+      <UniqueIdentifier>{8ec540f5-08ab-489a-bb57-b1e30ecf7646}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース\エレクトリック\コンポーネント\プレイヤー">
+      <UniqueIdentifier>{5c313f5a-072b-4939-a6d5-84aa2d927867}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース\エレクトリック\コンポーネント\エネミー">
+      <UniqueIdentifier>{6133b3bf-3d03-4901-b4cb-bb6c3c3b9fa4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース\エレクトリック\コンポーネント\ギミック">
+      <UniqueIdentifier>{97b9f101-9876-4c06-b82f-d7bdc5d81ee3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース\エレクトリック\コンポーネント\ベース">
+      <UniqueIdentifier>{64678f7e-75ee-4468-856e-d37d107da24f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース\エレクトリック\コンポーネント\UI">
+      <UniqueIdentifier>{6e891ea0-ed5f-48bc-8e64-c2ac9b98ec02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース\エレクトリック\オブジェクト\UI">
+      <UniqueIdentifier>{470e23da-5703-4617-b19c-2282c64bfd8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース\エレクトリック\オブジェクト\ベース">
+      <UniqueIdentifier>{9c101c8d-b929-4855-8501-85aed2c72c6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース\エレクトリック\オブジェクト\ギミック">
+      <UniqueIdentifier>{6ba5f23a-6977-439a-8255-0bd7d8b3d5f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース\エレクトリック\オブジェクト\エネミー">
+      <UniqueIdentifier>{b967324c-a211-4b10-ad69-05477e17fa84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース\エレクトリック\オブジェクト\プレイヤー">
+      <UniqueIdentifier>{afa3ab67-15bb-460b-8159-5c414d0e2c4c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DX11Game.rc">
