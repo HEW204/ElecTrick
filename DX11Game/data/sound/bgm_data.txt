@@ -1,2 +1,6 @@
-GameBGM.mp3
-TitleBGM.mp3
+BGM.mp3
+ElevaterUpdown.mp3
+EndingDoorMove.mp3
+PlayerMove.wav
+Strong_Wind.mp3
+TitleBGM.wav

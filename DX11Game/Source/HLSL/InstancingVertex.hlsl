@@ -1,11 +1,12 @@
 // 頂点シェーダ
 
 // インスタンシングデータ
-#define MAX_INSTANCE (1024)
+#define MAX_INSTANCE (512)
+
 struct InstancingMatrix
 {
     matrix mWorld;
-   // matrix mTexture;
+    matrix mTexture;
 };
 
 
@@ -14,7 +15,6 @@ cbuffer global : register(b0) {
 	matrix g_mVP;
 	matrix g_mLightVP;
     matrix g_mTexture;
-    float4 g_fog;
 };
 
 // インスタンシンググローバル
@@ -41,7 +41,6 @@ struct VS_OUTPUT {
     float3  Target      : TEXCOORD3;
     float3  BinNormal   : TEXCOORD4;
 	float4	Diffuse		: COLOR0;
-    float  Fog     : COLOR1;
    // uint    instID      : TEXCOORD5;
 };
 
@@ -71,14 +70,11 @@ VS_OUTPUT main(VS_INPUT input)
     output.BinNormal = mul(float4(output.BinNormal, 0.0f), g_mInstancing[n].mWorld).xyz;
     
     
-    //output.TexCoord = mul(float4(input.TexCoord, 0.0f, 1.0f), g_mInstancing[n].mTexture).xy;
-    output.TexCoord = mul(float4(input.TexCoord, 0.0f, 1.0f), g_mTexture).xy;
+    output.TexCoord = mul(float4(input.TexCoord, 0.0f, 1.0f), g_mInstancing[n].mTexture).xy;
+    //output.TexCoord = mul(float4(input.TexCoord, 0.0f, 1.0f), g_mTexture).xy;
 	output.Diffuse = input.Diffuse;
     
     //output.instID = n;
-    
-    // フォグ
-    output.Fog = g_fog.x + output.Position.w * g_fog.y;
     
 	return output;
 }

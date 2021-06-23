@@ -6,7 +6,6 @@ cbuffer global : register(b0) {
 	matrix g_mLightWVP;
 	matrix g_mWorld;
 	matrix g_mTexture;
-    float4 g_fog;
 };
 
 // パラメータ
@@ -26,7 +25,6 @@ struct VS_OUTPUT {
     float3  Target      : TEXCOORD3;
     float3  BinNormal   : TEXCOORD4;
 	float4	Diffuse		: COLOR0;
-    float   Fog			: COLOR1;
 };
 
 VS_OUTPUT main(VS_INPUT input)
@@ -55,9 +53,5 @@ VS_OUTPUT main(VS_INPUT input)
     
 	output.TexCoord = mul(float4(input.TexCoord, 0.0f, 1.0f), g_mTexture).xy;
 	output.Diffuse = input.Diffuse;
-	
-	// フォグ
-    output.Fog = g_fog.x + output.Position.w * g_fog.y;
-	
 	return output;
 }

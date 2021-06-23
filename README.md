@@ -1,4 +1,4 @@
-# D3D11Engine_ver0.2
+# ElecTrick
 
 
 ●●●　2020年度 GM21 HAL EVENT WEEK 作品 ●●●

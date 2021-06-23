@@ -27,7 +27,6 @@ struct VS_OUTPUT {
     float3 Target : TEXCOORD3;
     float3 BinNormal : TEXCOORD4;
 	float4	Diffuse		: COLOR0;
-    float  Fog     : COLOR1;
     
    // uint    instID      : TEXCOORD5;
 };
@@ -196,7 +195,7 @@ float4 main(VS_OUTPUT input) : SV_Target0
         val = val * val; // * (3.0f / (4.0f * PI));
         
         // ハーフランバート
-        Diff = g_vLd.rgb * Diff * val * sc * 2; // 拡散色
+        Diff = g_vLd.rgb * Diff * val * sc; // 拡散色
         //Diff = g_vLd.rgb * Diff * val * sc * N * 2; // 拡散色
        // Diff = g_vLd.rgb * Diff * val * sc + N; // 拡散色
         
@@ -210,12 +209,7 @@ float4 main(VS_OUTPUT input) : SV_Target0
 			pow(saturate(dot(N, H)), g_vKs.a) * sc * vTd.rgb; // 鏡面反射色
         Diff += Spec;
         Diff += g_vKe.rgb * vTd.rgb; // エミッション
-        
-        //　フォグ色とオブジェクト色と線形合成
-        //float3 FogColor = float3(1, 1, 1);
-        //float3 FogColor = float3(0.557f, 0.631f, 0.6f);
-        float3 FogColor = float3(0.0f, 0.51f, 0.51f);
-        Diff = lerp(FogColor, Diff, input.Fog);
+
     }
 
 

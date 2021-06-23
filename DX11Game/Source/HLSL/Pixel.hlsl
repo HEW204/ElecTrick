@@ -29,7 +29,6 @@ struct VS_OUTPUT {
     float3 Target : TEXCOORD3;
     float3 BinNormal : TEXCOORD4;
 	float4	Diffuse		: COLOR0;
-    float   Fog			: COLOR1;
 };
 
 Texture2D    g_texture : register(t0);	// テクスチャ
@@ -38,8 +37,9 @@ SamplerState g_sampler : register(s0);	// サンプラ
 Texture2D<float>    g_shadowTexture : register(t1);	// シャドウテクスチャ
 SamplerComparisonState g_shadowSampler : register(s1);	// シャドウサンプラ
 
-Texture2D g_bumpMaptexture : register(t2);      // 法線マップ
-Texture2D g_anbientMaptexture : register(t3);   // 環境マップ
+Texture2D g_bumpMaptexture : register(t2); // テクスチャ
+Texture2D g_anbientMaptexture : register(t3); // 環境マップ
+
 
 // 引数には正規化された反射ベクトルを代入
 float2 envMapEquirect(float3 dir)
@@ -66,7 +66,7 @@ float4 main(VS_OUTPUT input) : SV_Target0
     if (Alpha <= 0.0f)
         discard;
 
-    if (g_bLight && 
+    if (g_bLight &&
         (g_vLightDir.x != 0.0f || g_vLightDir.y != 0.0f || g_vLightDir.z != 0.0f))
     {
 		
@@ -189,7 +189,7 @@ float4 main(VS_OUTPUT input) : SV_Target0
         val = val * val; // * (3.0f / (4.0f * PI));
         
         // ハーフランバート
-        Diff = g_vLd.rgb * Diff * val * sc; // 拡散色
+        Diff = g_vLd.rgb * Diff * val * sc * 1.35f; // 拡散色
         
         // ランバート
        // Diff = g_vLd.rgb * Diff * saturate(dot(L, N)) * sc; // 拡散色
@@ -201,11 +201,6 @@ float4 main(VS_OUTPUT input) : SV_Target0
         Diff += Spec;
         Diff += g_vKe.rgb * vTd.rgb; // エミッション
         
-        //　フォグ色とオブジェクト色と線形合成
-        float3 FogColor = float3(0.557f, 0.631f, 0.6f);
-       // float3 FogColor = float3(0.0f, 0.51f, 0.51f);
-        Diff = lerp(FogColor, Diff, input.Fog);
-        Alpha = lerp(1, Alpha, input.Fog);
     }
 
 
