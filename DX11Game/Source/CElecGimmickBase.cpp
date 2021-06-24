@@ -36,10 +36,20 @@ void CElecGimmickBase::Start()
 	m_fEnergyBulletResource = 0;
 	m_bCurChargeflg = false;
 	m_bOldChargeflg = false;
+
+	// プレイヤーの取得
+	m_player = CObjectManager::SearchObjectTag("Player");
 }
 
 void CElecGimmickBase::Update()
 {
+	// プレイヤー停止
+	if (!m_player.expired())
+	{
+		// プレイヤー停止
+		if (m_player.lock()->GetStop())return;
+	}
+
 	m_bOldChargeflg = m_bCurChargeflg;
 
 	if (m_fEnergyBulletResource > 0)
@@ -148,7 +158,6 @@ void CElecGimmickBase::OnCollisionStay2D(const std::shared_ptr <CCollision2D>& c
 				resorce->m_bEnergyUse = false;
 			}
 		}
-	
 	}
 	else if (collsion2d->GetParent()->GetTag() == "EnergyBullet")
 	{

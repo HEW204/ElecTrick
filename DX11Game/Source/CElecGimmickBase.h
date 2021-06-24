@@ -36,6 +36,8 @@ private:
 	bool m_bCurChargeflg;
 	bool m_bOldChargeflg;
 
+	// プレイヤー
+	std::weak_ptr<CObject> m_player;
 protected:
 	float m_fUseResource;	// 消費量
 	float m_fEnergyBulletResource;		// エネルギー量を保管する変数
